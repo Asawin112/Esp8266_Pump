@@ -30,7 +30,7 @@ void reconnect() {
     Serial.print("Attempting MQTT connection…");
     if (client.connect(mqtt_Client, mqtt_username, mqtt_password)) {
       Serial.println("connected");
-      client.subscribe("@msg/#");  /*
+      client.subscribe("@msg/#");  
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
