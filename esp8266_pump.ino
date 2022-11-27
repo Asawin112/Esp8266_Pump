@@ -11,14 +11,14 @@ String autopump = "on";
 DHT dht(ddht, DHTTYPE);
 
 
-const char* ssid = "FIFA_3";
-const char* password = "12345678";
+const char* ssid = "______";
+const char* password = "_______";
 
 const char* mqtt_server = "broker.netpie.io";
 const int mqtt_port = 1883;
-const char* mqtt_Client = "64ff681d-4b48-4d6e-b3e1-e1e1a83832b2";
-const char* mqtt_username = "jcY49qgGmPDEdVmwm2XrbByRCAabPgcK";
-const char* mqtt_password = "Dk5aX6u5BpoURu2mDA!_ljtNTpqcFR)z";
+const char* mqtt_Client = "___________________________";
+const char* mqtt_username = "___________________________";
+const char* mqtt_password = "___________________________";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -30,7 +30,7 @@ void reconnect() {
     Serial.print("Attempting MQTT connection…");
     if (client.connect(mqtt_Client, mqtt_username, mqtt_password)) {
       Serial.println("connected");
-      client.subscribe("@msg/#");
+      client.subscribe("@msg/#");  /*
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
